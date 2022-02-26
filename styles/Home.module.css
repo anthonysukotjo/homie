@@ -2,6 +2,16 @@
   padding: 0 2rem;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  font-family: 'Signika Negative', sans-serif;
+}
+
+
+
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -113,4 +123,19 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+#house_icon {
+  position: fixed;
+  bottom: 0;
+}
+
+a {
+  text-decoration: coral;
+  text-align: left;
+}
+
+.button {
+  color: #678fbd;
+  font-size: large;
 }

@@ -1,55 +1,41 @@
 
 import React from "react"
 import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
-// const findHomie = ()=>{
-//     return (<div>
-//         {/* <h1>login page</h1> */}
-//         <Col>
-//             <Form>
-//                 {/* <h3>Sign In</h3>
-//                 <div className="form-group">
-//                     <label>Email address</label>
-//                     <input type="email" className="form-control" placeholder="Enter email" />
-//                 </div>
-//                 <div className="form-group">
-//                     <label>Password</label>
-//                     <input type="password" className="form-control" placeholder="Enter password" />
-//                 </div>
-//                 <div className="form-group">
-//                     <div className="custom-control custom-checkbox">
-//                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
-//                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-//                     </div>
-//                 </div>
-//                 <button type="submit" className="btn btn-primary btn-block">Submit</button>
-//                 <p className="forgot-password text-right">
-//                     Forgot <a href="#">password?</a>
-//                 </p> */}
-                
-//             </Form>
-
-//         </Col>
-//     </div>);
-// }
-
+import TimePicker from 'react-bootstrap-time-picker';
+import {Button} from "react-bootstrap";
 
 function Home() {
+
+
     return (
       <div className="main">
-        <h1>React Search</h1>
+    
+        <h1>Go Home with my Homies</h1>
+    
+
+  {/* need tp connect to google map api */}
+<form> 
+<div className="form-group">
+        <label>Enter your destination </label>
+         <input type="string" className="form-control" placeholder="Destination" />
+        </div>
         <div className="search">
-          {/* <TextField
-            id="outlined-basic"
-            variant="outlined"
-            fullWidth
-            label="Search"
-          />
-       
-        <List /> */}
+          {}
          </div>
-      </div>
-    );
+ </form>     
+ 
+<label style={{ color: "black"}}>
+    Select time you are leaving
+</label>
+
+<TimePicker start="0:00" end="24:00" step={15} />
+
+{/* the styling of this button can be same as login and signup from index page */}
+<Button href="/loading"> Find My Homies</Button>
+      </div>  
+    ) ;
   }
   
+
 
 export default Home;
