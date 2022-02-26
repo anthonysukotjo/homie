@@ -6,7 +6,7 @@ import {Button, Col} from "react-bootstrap";
 
 const Home: NextPage = () => {
   return (
-
+    
       <div>
           <div >
               <h1 style={{marginTop:"200px", fontSize:"45px" }}>WELCOME HOMIE

@@ -7,16 +7,16 @@ function Homies() {
 
 
     return (
+      <Col> 
       <div >
     
-      <h1 style={{marginTop:"200px", fontSize:"45px"}}> Helping you locate a homie...</h1>
+      <h1 style={{marginTop:"50px", fontSize:"40px"}}> Your Homies</h1>
       
       {/* need to add loading homie image here */}
    
       </div>  
-    )
-    
-    ;
+      </Col>
+    );
   }
   
 
