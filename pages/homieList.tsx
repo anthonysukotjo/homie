@@ -1,16 +1,30 @@
 import React, {useState,useEffect} from "react"
-import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
+import {Col, FloatingLabel, Row, Form, Spinner} from "react-bootstrap";
 import TimePicker from 'react-bootstrap-time-picker';
 import {Button} from "react-bootstrap";
 import { app } from './../firebase';
 import {collection, query, where, getDocs, getFirestore} from "firebase/firestore";
 import HomieCard from "../components/homieCard";
 
-
+const HomieCards = ({
+                                        data,
+                                        // instructionMode,
+                                        // classUnits,
+                                    }) => {
+    console.log("building...");
+    let elements: JSX.Element[] = [];
+    for (let i = 0; i < data.length; i++) {
+        elements.push(<HomieCard email= {data[i].email} distance = {data[i].distance}/>);
+    }
+    return <div>{elements}</div>;
+};
 
 const Homies = () => {
 
-    const [homieData, setHomieData] = useState([]);
+    const [homieData, setHomieData] = useState(
+        {loading: false,
+                    data: []
+                });
 
     useEffect(() => {
         (async () => {
@@ -24,7 +38,11 @@ const Homies = () => {
                     let temp = doc.data();
                     tempData.push(temp);
                 });
-                setHomieData(tempData);
+                setHomieData({
+                    loading: true,
+                    data : tempData});
+                console.log("HOMIE DATA")
+                console.log(homieData);
             } catch (error) {
                 console.error(error);
             }
@@ -35,14 +53,16 @@ const Homies = () => {
     return (
       <Col style={{textAlign:"center"}}> 
       <h1 style={{marginTop:"50px", fontSize:"40px"}}> Your Homies</h1>
-          <h1>{JSON.stringify(homieData)}</h1>
 
       {/* List of Homies */}
 
-     <HomieCard email="123@nyu.edu" distance="10"/> 
-     <HomieCard email="email@nyu.edu" distance="14"/> 
-     <HomieCard email="abc@nyu.edu" distance="20"/> 
-     <HomieCard email="abc789@nyu.edu" distance="22"/> 
+          {homieData.loading ? (
+                  <HomieCards
+                      data ={homieData.data}
+                  />
+
+          ) :   <Spinner animation="border" /> }
+
 
       </Col>
     );
