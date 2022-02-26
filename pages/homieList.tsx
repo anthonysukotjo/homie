@@ -4,6 +4,8 @@ import TimePicker from 'react-bootstrap-time-picker';
 import {Button} from "react-bootstrap";
 import { app } from './../firebase';
 import {collection, query, where, getDocs, getFirestore} from "firebase/firestore";
+import HomieCard from "../components/homieCard";
+
 
 
 const Homies = () => {
@@ -37,46 +39,10 @@ const Homies = () => {
 
       {/* List of Homies */}
 
-        <div className="card "  style={{margin:"0px"}}>
-          <div className="card-body">
-              <h5 className="card-title">Homie Name, Email</h5>
-          <p className="card-text"> destination distance: </p>
-          <a href="#" className="btn btn-primary">Chat with Homie</a>
-        </div>
-      </div>
-
-      <div className="card">
-          <div className="card-body">
-              <h5 className="card-title">Homie email</h5>
-          <p className="card-text">destination distance:.</p>
-          <a href="#" className="btn btn-primary">Chat with Homie</a>
-        </div>
-      </div>
-
-      <div className="card ">
-          <div className="card-body">
-              <h5 className="card-title">Homie email</h5>
-          <p className="card-text">destination distance:</p>
-          <a href="#" className="btn btn-primary">Chat with Homie</a>
-        </div>
-      </div>
-     
-      <div className="card ">
-          <div className="card-body">
-              <h5 className="card-title">Homie email</h5>
-          <p className="card-text">destination distance:</p>
-          <a href="#" className="btn btn-primary">Chat with Homie</a>
-        </div>
-      </div>
-      
-
-      <div className="card">
-          <div className="card-body">
-              <h5 className="card-title">Homie email</h5>
-          <p className="card-text">destination distance:</p>
-          <a href="#" className="btn btn-primary">Chat with Homie</a>
-        </div>
-      </div>
+     <HomieCard email="123@nyu.edu" distance="10"/> 
+     <HomieCard email="email@nyu.edu" distance="14"/> 
+     <HomieCard email="abc@nyu.edu" distance="20"/> 
+     <HomieCard email="abc789@nyu.edu" distance="22"/> 
 
       </Col>
     );
