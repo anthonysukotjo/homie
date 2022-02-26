@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee63fe7c-a6d3-49f8-bbad-eacabf1bb327" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/homieCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/homieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homieList.tsx" afterDir="false" />
     </list>
@@ -33,7 +34,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -64,6 +68,7 @@
       <workItem from="1645843704054" duration="421000" />
       <workItem from="1645844244651" duration="668000" />
       <workItem from="1645846910669" duration="23659000" />
+      <workItem from="1645916351160" duration="3000" />
     </task>
     <servers />
   </component>
