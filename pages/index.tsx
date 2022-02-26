@@ -5,37 +5,70 @@ import styles from '../styles/Home.module.css'
 import {Button, Col} from "react-bootstrap";
 
 const Home: NextPage = () => {
-  return (
-    
-      <div>
-          <div >
-              <h1 style={{marginTop:"200px", fontSize:"45px" }}>WELCOME HOMIE
-              </h1>
-              <Col>
+    return (
 
-                  <div >
-                      <Button
-                          style={{marginTop:"50px", width:"100px"}}
-                          href={"/login"}>
+        <div>
+            <div >
+                <h1 style={{ marginTop: "200px", fontSize: "45px" }}>WELCOME HOMIE
+                </h1>
+                <Col>
 
-                          Login
-                      </Button>
-                  </div>
-                  <div  >
-                  <Button
-                      style={{marginTop:"50px", width:"100px"}}
-                      href={"/signup"}
-                  >
-                      Sign up
-                  </Button>
-              </div>
-              </Col>
-          </div>
-      </div>
+                    <div >
+                        <a
+                            href={"/login"} >
+                            <div
+
+
+                                className="loginbutton"
+                            >
+
+                                Login
 
 
 
-  )
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className='button'>
+                        <a
+                            href={"/signup"}>
+                            <div
+
+
+                                className="signupbutton"
+                            >
+
+                                Sign Up
+
+
+
+
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+
+                    <div id='house_icon'>
+                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "100px" }}
+                        />
+
+
+
+                    </div>
+
+
+                </Col>
+            </div>
+        </div>
+
+
+
+    )
 }
 
 export default Home;
