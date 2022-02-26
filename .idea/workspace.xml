@@ -11,14 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee63fe7c-a6d3-49f8-bbad-eacabf1bb327" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase/firebase.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase/useFirebaseAuth.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,7 @@
       <workItem from="1645843522235" duration="179000" />
       <workItem from="1645843704054" duration="421000" />
       <workItem from="1645844244651" duration="668000" />
-      <workItem from="1645846910669" duration="17256000" />
+      <workItem from="1645846910669" duration="20905000" />
     </task>
     <servers />
   </component>
@@ -100,10 +96,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="144" y="98" key="MergeDialog/0.25.1440.875@0.25.1440.875" timestamp="1645894356001" />
-    <state x="-27" y="26" width="1036" height="822" key="dock-window-1" timestamp="1645906679456">
+    <state x="202" y="26" width="1036" height="822" key="dock-window-1" timestamp="1645910150535">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="-27" y="26" width="1036" height="822" key="dock-window-1/0.25.1440.875@0.25.1440.875" timestamp="1645906679456" />
+    <state x="202" y="26" width="1036" height="822" key="dock-window-1/0.25.1440.875@0.25.1440.875" timestamp="1645910150535" />
     <state x="482" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1645894333790">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
