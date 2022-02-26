@@ -2,6 +2,7 @@
   padding: 0 2rem;
 }
 
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -29,7 +30,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #678fbd;
   text-decoration: none;
 }
 
@@ -113,4 +114,9 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+#house_icon {
+  position: fixed;
+  bottom: 0;
 }
