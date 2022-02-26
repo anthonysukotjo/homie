@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
                     <div >
                         <a
-                            href={"/login"}>
+                            href={"/login"} >
                             <div
 
 
@@ -31,17 +31,27 @@ const Home: NextPage = () => {
                         </a>
                     </div>
 
+                    <div className='button'>
+                        <a
+                            href={"/signup"}>
+                            <div
+
+
+                                className="signupbutton"
+                            >
+
+                                Sign Up
 
 
 
-                    <div  >
-                        <Button
-                            style={{ marginTop: "50px", width: "180px" }}
-                            href={"/signup"}
-                        >
-                            Sign up
-                        </Button>
+
+                            </div>
+                        </a>
                     </div>
+
+
+
+
 
                     <div id='house_icon'>
                         <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "100px" }}
