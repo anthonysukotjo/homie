@@ -2,7 +2,7 @@ import React from "react"
 import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
 const Login = ()=>{
     return (<div>
-        <h1>login page</h1>
+        {/* <h1>login page</h1> */}
         <Col>
             <Form>
                 <h3>Sign In</h3>
