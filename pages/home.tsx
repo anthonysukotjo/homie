@@ -1,3 +1,4 @@
+
 import React from "react"
 import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
 // const findHomie = ()=>{
@@ -50,4 +51,5 @@ function Home() {
     );
   }
   
+
 export default Home;
