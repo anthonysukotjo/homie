@@ -10,7 +10,7 @@ function Homies() {
 
   return (
     <Col style={{ textAlign: "center" }}>
-      <h1 style={{ marginTop: "50px", fontSize: "40px" }}> Your Homies</h1>
+      <h1 style={{ marginTop: "50px", fontSize: "40px", color: "#9381ff" }}> Your Homies</h1>
 
       {/* List of Homies */}
 
@@ -18,8 +18,6 @@ function Homies() {
       <HomieCard email="email@nyu.edu" distance="14" />
       <HomieCard email="abc@nyu.edu" distance="20" />
       <HomieCard email="abc789@nyu.edu" distance="22" />
-
-      <GeneralButton name="hs" href="/login" />
 
     </Col>
   );

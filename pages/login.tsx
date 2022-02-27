@@ -23,11 +23,8 @@ const Login = () => {
                         <label className="custom-control-label" style={stylePass} htmlFor="customCheck1"> Remember me</label>
                     </div>
                 </div>
-                {/* <button type="submit" className="btn btn-primary btn-block">Submit</button> */}
                 <div><Button> Submit</Button></div>
-                {/* <p className="forgot-password text-right" style={stylePass}>
-                    Forgot <a href="#">password?</a>
-                </p> */}
+
             </Form >
 
         </Col >

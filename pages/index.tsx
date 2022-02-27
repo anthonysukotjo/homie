@@ -12,51 +12,18 @@ import { stepButtonClasses } from '@mui/material';
 const Home: NextPage = () => {
     return (
 
-        <div>
-            <div >
-                <h1 style={{
-                    marginTop: "200px", fontSize: "60px",
-                    color: "#9381FF",
-                }}>WELCOME TO HOMIE
-                </h1>
+        <div style={{ margin: "0px" }}>
+            <div style={{ margin: "0px" }} >
+
 
 
 
                 <Col>
-                    {/* <div >
-                        <a
-                            href={"/login"} >
-                            <div
-                                className="loginbutton"
-                            >
-                                Login
-                            </div>
-                        </a>
-                    </div> */}
-
-                    {/* <button className="loginbutton"
-                        onclick="/login">
-                        login
-                    </button> */}
-
-
-                    {/* <div className='button'>
-                        <a
-                            href={"/signup"}>
-                            <div
-                                className="signupbutton"
-                            >
-                                Sign Up
-                            </div>
-                        </a>
-                    </div> */}
-
-                    {/* <a id="houseList" href='/login'> <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "100px" }}
-                    /> </a> */}
-
-
-
-                    {/* <StepButton name="Login" /> */}
+                    <h1 style={{
+                        marginTop: "200px", fontSize: "60px",
+                        color: "#9381FF",
+                    }}>WELCOME TO HOMIE
+                    </h1>
 
                     <div>
                         <GeneralButton name="Sign In" href='/login' />
@@ -65,7 +32,7 @@ const Home: NextPage = () => {
                         <GeneralButton name="Sign Up" href='/signup' />
                     </div>
                     <div>
-                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "300px" }}
+                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "200px" }}
                         />
                     </div>
                 </Col>
