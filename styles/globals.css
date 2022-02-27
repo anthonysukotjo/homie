@@ -17,8 +17,8 @@ body {
   text-align :center;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: aqua; */
-  background-image: linear-gradient(#FFEEDD, #FFD8BE);
+   background-color:  #FFD8BE;
+  /*background-image: linear-gradient(#FFEEDD,);*/
   height: 100vh;
   width: 100%;
   max-width: 600px;

@@ -26,12 +26,8 @@ function deg2rad(deg) {
 }
 
 
-const HomieCards = ({
-                                        data,
-                                        email
-                                        // instructionMode,
-                                        // classUnits,
-                                    }) => {
+const HomieCards = ({data, email}) => {
+
     console.log("building...");
     let elements: JSX.Element[] = [];
     let parsedDateWithDistance: {
@@ -42,7 +38,7 @@ const HomieCards = ({
     }[] = [];
     const localLat  = window.sessionStorage.getItem("homieLoginLat") || 0;
     const localLng  = window.sessionStorage.getItem("homieLoginLong") || 0;
-    const localTime = window.sessionStorage.getItem("homieLoginTime") || 0;
+    const localTime = window.sessionStorage.getItem("homieLoginTime") || "0";
 
 
     console.log("local coordiates");
@@ -52,7 +48,7 @@ const HomieCards = ({
     for (let i = 0; i < data.length; i++) {
         if (data[i].email == email) continue;
         const distance = getDistanceFromLatLonInKm(localLat,localLng, data[i].lat,data[i].long);
-        const ourHours = Math.floor(   parseInt(data[i].time) / (3600));
+        const ourHours = Math.floor(   parseInt(localTime) / (3600));
         const theirHours = Math.floor(   parseInt(data[i].time) / (3600));
 
         if (!(ourHours % 24 + 1 > theirHours || ourHours % 24  -  1 < theirHours)) continue;
@@ -69,7 +65,13 @@ const HomieCards = ({
     parsedDateWithDistance.sort((a, b) => (a.distance > b.distance) ? 1 : -1);
     const minLength = Math.min(parsedDateWithDistance.length, 4 )
     for (let i = 0; i < minLength; i++) {
-        elements.push(<HomieCard email= {data[i].email} distance={parsedDateWithDistance[i].distance.toString()} time={data[i].time}/>);
+        elements.push(<HomieCard
+            email= {data[i].email}
+            distance={parsedDateWithDistance[i].distance.toString()}
+            time={data[i].time}
+            lat ={data[i].lat}
+            long={data[i].long}
+        />);
     }
     return <div>{elements}</div>;
 };
@@ -106,8 +108,13 @@ const Homies = () => {
 
 
   return (
-    <Col style={{ textAlign: "center" }}>
-      <h1 style={{ marginTop: "50px", fontSize: "40px", color: "#9381ff", fontWeight: "bold" }}> Your Homies</h1>
+    <Col style={{ textAlign: "center", marginBottom:"30px"  }}>
+      <h1 style={{
+          marginTop: "50px",
+          fontSize: "40px",
+          color: "#9381ff",
+          fontWeight: "bold",
+      }}> Your Homies</h1>
 
       {/* List of Homies */}
 
