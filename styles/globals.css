@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Signika Negative', sans-serif;
 }
 
 .main {
@@ -15,8 +19,9 @@ body {
   height: 100vh;
   width: 100%;
   max-width: 600px;
-  /* overflow: hidden; */
+
 }
+
 
 h1 {
   font-family: 'Signika', sans-serif;
@@ -34,6 +39,11 @@ a {
 #house {
   width: 130px;
   height: 200px;
+
+}
+
+.input {
+  height: 300px;
 }
 
 
@@ -52,9 +62,6 @@ a {
   text-decoration: none;
   color: #ffffff;
 
-
-
-  /* position: absolute; */
   width: 256px;
   height: 51px;
 

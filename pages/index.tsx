@@ -5,6 +5,9 @@ import styles from '../styles/Home.module.css'
 import { Button, Col } from "react-bootstrap";
 import { fontGrid } from '@mui/material/styles/cssUtils';
 import styled from 'styled-components';
+import StepButton from '../components/stepButton';
+import GeneralButton from '../components/button';
+import { stepButtonClasses } from '@mui/material';
 
 const Home: NextPage = () => {
     return (
@@ -13,13 +16,14 @@ const Home: NextPage = () => {
             <div >
                 <h1 style={{
                     marginTop: "200px", fontSize: "60px",
+                    color: "#9381FF",
                 }}>WELCOME TO HOMIE
                 </h1>
 
 
 
                 <Col>
-                    <div >
+                    {/* <div >
                         <a
                             href={"/login"} >
                             <div
@@ -28,7 +32,7 @@ const Home: NextPage = () => {
                                 Login
                             </div>
                         </a>
-                    </div>
+                    </div> */}
 
                     {/* <button className="loginbutton"
                         onclick="/login">
@@ -36,7 +40,7 @@ const Home: NextPage = () => {
                     </button> */}
 
 
-                    <div className='button'>
+                    {/* <div className='button'>
                         <a
                             href={"/signup"}>
                             <div
@@ -45,14 +49,25 @@ const Home: NextPage = () => {
                                 Sign Up
                             </div>
                         </a>
-                    </div>
+                    </div> */}
 
                     {/* <a id="houseList" href='/login'> <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "100px" }}
                     /> </a> */}
 
-                    <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "100px" }}
-                    />
 
+
+                    {/* <StepButton name="Login" /> */}
+
+                    <div>
+                        <GeneralButton name="Sign In" href='/login' />
+                    </div>
+                    <div>
+                        <GeneralButton name="Sign Up" href='/signup' />
+                    </div>
+                    <div>
+                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "300px" }}
+                        />
+                    </div>
                 </Col>
 
             </div>

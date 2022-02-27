@@ -1,15 +1,15 @@
 import React from "react"
-import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
+import { Col, FloatingLabel, Row, Form } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 import { app } from './../firebase';
-import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Router from "next/router";
 
-const signIn = async (email: string, password: string) =>{
+const signIn = async (email: string, password: string) => {
 
 
     signInWithEmailAndPassword(getAuth(app), email, password)
-        .then( async (userCredential) => {
+        .then(async (userCredential) => {
             // Signed in
             const user = userCredential.user;
             console.log(user);
@@ -27,12 +27,12 @@ const signIn = async (email: string, password: string) =>{
 
 
 }
-const Login = ()=>{
-    const {  register, handleSubmit } = useForm();
-    const onSubmit = async (data: {[x:string]:string}) =>{
+const Login = () => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = async (data: { [x: string]: string }) => {
         console.log("logging in...");
         console.log(data);
-        await signIn(data.email,data.password);
+        await signIn(data.email, data.password);
     };
     return (<div>
         {/* <h1>login page</h1> */}
@@ -56,7 +56,7 @@ const Login = ()=>{
                         className="form-control"
                         placeholder="Enter password"
                         {...register("password")}
-                        required/>
+                        required />
                 </div>
                 <div className="form-group">
                     <div className="custom-control custom-checkbox">
