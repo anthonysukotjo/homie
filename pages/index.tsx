@@ -18,6 +18,8 @@ const Home: NextPage = () => {
                     paddingTop: "200px",
                     fontSize: "60px",
                     color: "#9381FF",
+                    fontWeight: "bold",
+                    fontFamily: 'Signika Negative, sans-serif',
                 }}>WELCOME TO HOMIE
                 </h1>
 
