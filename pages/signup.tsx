@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const SignUp = () => {
     return (<div style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
         {/* <h1>Sign Up page</h1> */}
-        <Col xs={5}>
+        <Col xs={100}>
             <Form>
                 <h3 style={styleObj}>Sign Up</h3>
                 <div className="form-group">
