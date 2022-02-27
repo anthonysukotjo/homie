@@ -7,9 +7,6 @@ const homieButton = {
 
   width: '200px',
   height: '36px',
-  /* button gradient */
-
-  // background: 'linear-gradient(#B8B8FF, #9381FF)',
   background: '#B8B8FF',
   border: 'none',
   fontFamily: "Signika Negative, sans-serif",
@@ -23,7 +20,7 @@ const homieButton = {
   marginTop: "10px",
   outline: 'none',
   boxShadow: "5px 5px 4px #4444DD"
-  // border: "30px"
+
 
 } as React.CSSProperties;
 
