@@ -14,7 +14,7 @@ const HomieCards = ({
     console.log("building...");
     let elements: JSX.Element[] = [];
     for (let i = 0; i < data.length; i++) {
-        elements.push(<HomieCard email= {data[i].email} distance = {data[i].distance}/>);
+        elements.push(<HomieCard email= {data[i].email} distance = {data[i].location} time={data[i].time}/>);
     }
     return <div>{elements}</div>;
 };
