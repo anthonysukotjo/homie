@@ -9,12 +9,14 @@ import GeneralButton from "../components/button";
 
 const HomieCards = ({
                                         data,
+                                        email
                                         // instructionMode,
                                         // classUnits,
                                     }) => {
     console.log("building...");
     let elements: JSX.Element[] = [];
     for (let i = 0; i < data.length; i++) {
+        if (data[i].email == email) continue;
         elements.push(<HomieCard email= {data[i].email} distance = {data[i].location} time={data[i].time}/>);
     }
     return <div>{elements}</div>;
@@ -60,6 +62,7 @@ const Homies = () => {
           {homieData.loading ? (
                   <HomieCards
                       data ={homieData.data}
+                      email={window.sessionStorage.getItem("homieLoginEmail")}
                   />
 
           ) :   <Spinner animation="border" /> }
