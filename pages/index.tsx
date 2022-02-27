@@ -15,7 +15,8 @@ const Home: NextPage = () => {
         <div>
             <div >
                 <h1 style={{
-                    marginTop: "200px", fontSize: "60px",
+                    paddingTop: "200px",
+                    fontSize: "60px",
                     color: "#9381FF",
                 }}>WELCOME TO HOMIE
                 </h1>
@@ -65,7 +66,7 @@ const Home: NextPage = () => {
                         <GeneralButton name="Sign Up" href='/signup' />
                     </div>
                     <div>
-                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "300px" }}
+                        <img id="house" src='house.png' alt='house' width={120} height={130} style={{ marginTop: "80px" }}
                         />
                     </div>
                 </Col>
