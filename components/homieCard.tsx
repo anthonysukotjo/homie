@@ -9,7 +9,11 @@ const HomieCard:FunctionComponent<{
     time: string
 }>= props=>  {
     const timeInInt = parseInt(props.time);
-    const parsedTime = Math.floor( timeInInt / (3600)).toString()+":"+ (timeInInt%3600)/60;
+    const hours = Math.floor( timeInInt / (3600));
+    const minutes =(timeInInt%3600)/60;
+    const hoursString = hours < 10 ? "0" + hours : hours.toString();
+    const minutesString = minutes < 10 ? "0" + minutes : minutes.toString();
+    const parsedTime = hoursString + ":" + minutesString;
     return (
 
         <div className="card "  style={{margin:"15px"}}>
