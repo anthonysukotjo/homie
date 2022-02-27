@@ -43,6 +43,10 @@ const saveToDB= async (
         lat: lat,
         long: long,
     });
+
+    window.sessionStorage.setItem("homieLoginLat", lat);
+    window.sessionStorage.setItem("homieLoginLong", long);
+    window.sessionStorage.setItem("homieLoginTime", time);
 }
 
 

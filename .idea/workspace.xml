@@ -15,9 +15,6 @@
       <change beforePath="$PROJECT_DIR$/components/homieCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/homieCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/homieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homieList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
