@@ -6,6 +6,7 @@ import { app } from './../firebase';
 import {collection, query, where, getDocs, getFirestore} from "firebase/firestore";
 import HomieCard from "../components/homieCard";
 import GeneralButton from "../components/button";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 const HomieCards = ({
                                         data,
