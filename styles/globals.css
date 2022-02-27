@@ -5,27 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 
 
+
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: white;
+  font-family: 'Signika Negative', sans-serif;
 }
 
 .main {
-  text-align: center;
+  text-align :center;
   margin-left: auto;
   margin-right: auto;
+  /* background-color: aqua; */
   background-image: linear-gradient(#FFEEDD, #FFD8BE);
   height: 100vh;
   width: 100%;
   max-width: 600px;
-
-}
-
-
-h1 {
-  font-family: 'Signika', sans-serif;
+  /*overflow: hidden;*/
 }
 
 a {
@@ -40,11 +37,6 @@ a {
 #house {
   width: 130px;
   height: 200px;
-
-}
-
-.input {
-  height: 300px;
 }
 
 
@@ -58,11 +50,9 @@ a {
   margin-right: auto;
   width: 280px;
   height: 100px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
 
+
+  /* position: absolute; */
   width: 256px;
   height: 51px;
 
@@ -82,3 +72,10 @@ a {
   height: 51px;
 
 }
+
+h1 {
+  font-family: 'Signika', sans-serif;
+  color: #9381ff;
+  font-weight: bold;
+}
+

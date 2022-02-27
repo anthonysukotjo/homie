@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
-import {Col, FloatingLabel, Row, Form} from "react-bootstrap";
+import { Col, FloatingLabel, Row, Form } from "react-bootstrap";
 import TimePicker from 'react-bootstrap-time-picker';
 import {Button} from "react-bootstrap";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
@@ -13,6 +13,26 @@ const center = {
     lat: 40.721120,
     lng: -73.981450
 };
+
+const cardstyle = {
+
+  width: '200px',
+  height: '36px',
+  background: '#B8B8FF',
+  border: 'none',
+  fontFamily: "Signika Negative, sans-serif",
+  fontStyle: 'normal',
+  fontWeight: 'bold',
+  fontSize: '15px',
+  borderRadius: '10px',
+  textTransform: 'uppercase',
+  textAlign: "center",
+  color: 'black',
+  marginTop: "10px",
+  outline: 'none',
+  boxShadow: "5px 5px 4px #4444DD"
+
+} as React.CSSProperties;
 
 const HomieCard:FunctionComponent<{
     email: string,
@@ -68,12 +88,11 @@ const HomieCard:FunctionComponent<{
               <h5 className="card-title">{props.email}</h5>
               <h5 className="card-title">I want to leave at {parsedTime}</h5>
               <p className="card-text"> I want to go to {props.distance} </p>
-          <a href={"mailto:" + props.email} className="btn btn-primary">Chat with Homie</a>
-
-
-          </div>
+          <a style={cardstyle} href={"mailto:" + props.email} className="btn btn-primary">Chat with Homie</a>
+        </div>
       </div>
-    );
+    //</div>
+  );
 }
 
 export default HomieCard;

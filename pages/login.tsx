@@ -52,6 +52,7 @@ const Login = ()=>{
                         style={styleFloat} />
                 </div>
                 <div className="form-group">
+                    <label></label>
                     <input
                         type="password"
                         className="form-control"

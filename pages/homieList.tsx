@@ -56,7 +56,7 @@ const Homies = () => {
 
   return (
     <Col style={{ textAlign: "center" }}>
-      <h1 style={{ marginTop: "50px", fontSize: "40px" }}> Your Homies</h1>
+      <h1 style={{ marginTop: "50px", fontSize: "40px", color: "#9381ff", fontWeight: "bold" }}> Your Homies</h1>
 
       {/* List of Homies */}
 
