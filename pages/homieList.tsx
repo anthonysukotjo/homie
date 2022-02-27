@@ -5,6 +5,7 @@ import {Button} from "react-bootstrap";
 import { app } from './../firebase';
 import {collection, query, where, getDocs, getFirestore} from "firebase/firestore";
 import HomieCard from "../components/homieCard";
+import GeneralButton from "../components/button";
 
 const HomieCards = ({
                                         data,
@@ -50,9 +51,9 @@ const Homies = () => {
     }, []);
 
 
-    return (
-      <Col style={{textAlign:"center"}}> 
-      <h1 style={{marginTop:"50px", fontSize:"40px"}}> Your Homies</h1>
+  return (
+    <Col style={{ textAlign: "center" }}>
+      <h1 style={{ marginTop: "50px", fontSize: "40px" }}> Your Homies</h1>
 
       {/* List of Homies */}
 
@@ -63,11 +64,8 @@ const Homies = () => {
 
           ) :   <Spinner animation="border" /> }
 
-
-      </Col>
-    );
-  }
-  
+          </Col> );
+          }
 
 
 export default Homies;
