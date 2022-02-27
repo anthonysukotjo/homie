@@ -28,7 +28,7 @@ const signUp = (
 
 
 };
-const SignUp = ()=>{
+const SignUp = () => {
     const {  register, handleSubmit } = useForm();
     const onSubmit = async (data: { [x:string]: string }) => {
         console.log(data);
@@ -43,19 +43,19 @@ const SignUp = ()=>{
 
         }
     };
-    return (<div>
+    return (<div style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
         {/* <h1>Sign Up page</h1> */}
-        <Col>
+        <Col xs={100}>
             <Form  onSubmit={handleSubmit(onSubmit)}>
-                <h3>Sign Up</h3>
+                <h3 style={styleObj}>Sign Up</h3>
                 <div className="form-group">
-                    <label>Email address</label>
+                    {/* <label>Email address</label> */}
                     <input
                         type="email"
                         className="form-control"
                         placeholder="Enter email"
                         {...register("email")}
-                        required />
+                        required
                         style={styleFloat} />
                 </div>
                 <div className="form-group">
@@ -70,7 +70,8 @@ const SignUp = ()=>{
                         style={styleFloat} />
                 </div>
                 <div className="form-group">
-                    <label>Confirm Your Password</label>
+                    {/* <label>Confirm Your Password</label> */}
+                    <label></label>
                     <input type="password"
                            className="form-control"
                            placeholder="Enter password"
