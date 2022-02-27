@@ -11,7 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee63fe7c-a6d3-49f8-bbad-eacabf1bb327" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/components/homieCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/homieCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,9 +105,9 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="482" y="179" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1645894333790" />
-    <state x="408" y="215" width="670" height="676" key="search.everywhere.popup" timestamp="1645901356731">
+    <state x="408" y="215" width="670" height="676" key="search.everywhere.popup" timestamp="1645929456495">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="408" y="215" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1645901356731" />
+    <state x="408" y="215" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1645929456495" />
   </component>
 </project>

@@ -7,6 +7,7 @@ import { app } from './../firebase';
 
 import {doc, getFirestore, setDoc} from "firebase/firestore";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
+import Router from "next/router";
 
 // Add a new document in collection "cities"
 function makeid(length) {
@@ -23,7 +24,9 @@ function makeid(length) {
 const mapAPIKey = process.env.GOOGLE_MAPS_API_KEY;
 const saveToDB= async (time, location)=>{
     const email  = window.sessionStorage.getItem("homieLoginEmail")  || "no email";
-    await setDoc(doc(getFirestore(app), "location",makeid(20)), {
+    const id = email ;
+        // + time.toString()
+    await setDoc(doc(getFirestore(app), "location",id), {
         location: location,
         email: email,
         time: time.toString()
@@ -85,6 +88,7 @@ function Home() {
             console.log(location);
             console.log(time);
            await saveToDB(time,location);
+           await Router.push("/homieList");
         }
     }}
 > Find My Homies</Button>
