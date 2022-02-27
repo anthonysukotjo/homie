@@ -34,7 +34,9 @@ const HomieCards = ({data, email}) => {
         email:string,
         location : string,
         time : string,
-        distance: number
+        distance: number,
+        lat: number,
+        long: number
     }[] = [];
     const localLat  = window.sessionStorage.getItem("homieLoginLat") || 0;
     const localLng  = window.sessionStorage.getItem("homieLoginLong") || 0;
@@ -50,27 +52,33 @@ const HomieCards = ({data, email}) => {
         const distance = getDistanceFromLatLonInKm(localLat,localLng, data[i].lat,data[i].long);
         const ourHours = Math.floor(   parseInt(localTime) / (3600));
         const theirHours = Math.floor(   parseInt(data[i].time) / (3600));
+        console.log("our hours", ourHours, "their hours", theirHours);
+        console.log(distance);
+        if ((ourHours + 1 == theirHours || ourHours  -  1 == theirHours || ourHours == theirHours)) {
+            const obj = {
+                email: data[i].email,
+                location : data[i].location,
+                time : data[i].time,
+                distance: distance,
+                lat: data[i].lat,
+                long: data[i].long
+            }
+            console.log(obj);
+            parsedDateWithDistance.push(obj);
 
-        if (!(ourHours % 24 + 1 > theirHours || ourHours % 24  -  1 < theirHours)) continue;
-        const obj = {
-            email: data[i].email,
-            location : data[i].location,
-            time : data[i].time,
-            distance: distance,
         }
-        console.log(obj);
-       parsedDateWithDistance.push(obj);
+
     }
 
     parsedDateWithDistance.sort((a, b) => (a.distance > b.distance) ? 1 : -1);
     const minLength = Math.min(parsedDateWithDistance.length, 4 )
     for (let i = 0; i < minLength; i++) {
         elements.push(<HomieCard
-            email= {data[i].email}
+            email= {parsedDateWithDistance[i].email}
             distance={parsedDateWithDistance[i].distance.toString()}
-            time={data[i].time}
-            lat ={data[i].lat}
-            long={data[i].long}
+            time={parsedDateWithDistance[i].time}
+            lat ={parsedDateWithDistance[i].lat}
+            long={parsedDateWithDistance[i].long}
         />);
     }
     return <div>{elements}</div>;

@@ -1,5 +1,5 @@
 import React, {FunctionComponent, useEffect, useState} from "react"
-import { Col, FloatingLabel, Row, Form } from "react-bootstrap";
+import {Col, FloatingLabel, Row, Form, Spinner} from "react-bootstrap";
 import TimePicker from 'react-bootstrap-time-picker';
 import {Button} from "react-bootstrap";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
@@ -48,6 +48,7 @@ const HomieCard:FunctionComponent<{
         (async () => {
             await new Promise(resolve => setTimeout(resolve, 100));
             setisLoadedLoaded(true);
+            setZoom(15);
         })();
     }, []);
 
@@ -63,7 +64,7 @@ const HomieCard:FunctionComponent<{
         id: 'google-map-script',
         googleMapsApiKey:"AIzaSyAOPXPtW9ZSRH_F5tliPUID9Ph2mXi97Kg"
     })
-
+    const [zoom, setZoom] = useState(0);
     const [isLoadedLoaded, setisLoadedLoaded] = useState(false);
     const [map, setMap] = React.useState(null)
 
@@ -82,8 +83,9 @@ const HomieCard:FunctionComponent<{
         lng: props.long
     };
 
-    console.log("center", center);
-    const distInMiles =    ( parseInt(props.distance)*0.62137 ).toFixed(2);
+    console.log("distance", props.distance);
+    const distInMiles =    ( Number(props.distance) * 0.62137 ).toFixed(2);
+    console.log("distance in miles", distInMiles);
 
     return (
 
@@ -98,14 +100,14 @@ const HomieCard:FunctionComponent<{
                       <GoogleMap
                           mapContainerStyle={containerStyle}
                           center={center}
-                          zoom={10}
-                          onLoad={onLoad}
-                          onUnmount={onUnmount}
+                          zoom={15}
                       >
                           { /* Child components, such as markers, info windows, etc. */ }
                           <></>
                       </GoogleMap>
-                  ) : <></>
+                  ) : <div
+                      style={{margin:"auto"}}
+                  ><Spinner animation="border" /></div>
               }
           <a style={cardstyle} href={"mailto:" + props.email} className="btn btn-primary">Connect with Homie</a>
 
