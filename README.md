@@ -25,6 +25,5 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-##Demo
-YouTube Demo: 
+## YouTube Demo
 https://www.youtube.com/watch?v=xBeUw609FXY&t=3s&ab_channel=MeganChen
